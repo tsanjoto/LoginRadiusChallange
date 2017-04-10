@@ -11,6 +11,7 @@
 
 static NSString * const LoginRadiusPlistFileName = @"LoginRadius";
 static NSString * const LoginRadiusAPIKey = @"ApiKey";
+static NSString * const LoginRadiusAPISecret = @"ApiSecret";
 static NSString * const LoginRadiusSiteName = @"SiteName";
 
 @interface LoginRadiusSDK ()
@@ -29,14 +30,17 @@ static NSString * const LoginRadiusSiteName = @"SiteName";
     NSString *path = [[NSBundle mainBundle] pathForResource:LoginRadiusPlistFileName ofType:@"plist"];
     NSDictionary* values = [NSDictionary dictionaryWithContentsOfFile:path];
     NSString *apiKey = values[LoginRadiusAPIKey];
+    NSString *apiSecret = values[LoginRadiusAPISecret];
     NSString *siteName = values[LoginRadiusSiteName];
     NSAssert(apiKey, @"ApiKey cannot be null in LoginRadius.plist");
+    NSAssert(apiKey, @"ApiSecret cannot be null in LoginRadius.plist");
     NSAssert(siteName, @"SiteName cannot be null in LoginRadius.plist");
 
     self = [super init];
 
     if (self) {
         _apiKey = apiKey;
+        _apiSecret = apiSecret;
         _siteName = siteName;
 		_registrationManager = [[LoginRadiusRegistrationManager alloc] init];
 		_socialLoginManager = [[LoginRadiusSocialLoginManager alloc] init];
@@ -79,6 +83,10 @@ static NSString * const LoginRadiusSiteName = @"SiteName";
 
 + (NSString*) apiKey {
 	return [LoginRadiusSDK sharedInstance].apiKey;
+}
+
++ (NSString*) apiSecret {
+    return [LoginRadiusSDK sharedInstance].apiSecret;
 }
 
 + (NSString*) siteName {

@@ -36,4 +36,26 @@
     }];
 }
 
+- (void)updateUserProfileWithAccessToken:(NSString *) token
+                                  appkey:(NSString *) appkey
+                               appsecret:(NSString *) appsecret
+                              parameters:(id) parameters
+                       completionHandler:(LRAPIResponseHandler) completion
+{
+    
+    [[LoginRadiusREST sharedInstance] sendPOST:@"/raas/v1/user/update"
+                                   queryParams:@{
+                                                 @"appkey": appkey,
+                                                 @"appsecret": appsecret,
+                                                 @"token": token
+                                               }
+        body:parameters completionHandler:^(NSDictionary *response, NSError *error) {
+          if (error) {
+              completion(nil, error);
+          } else {
+              completion(response, nil);
+          }
+    }];
+}
+
 @end

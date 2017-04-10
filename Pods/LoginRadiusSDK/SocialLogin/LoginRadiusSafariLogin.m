@@ -26,7 +26,7 @@
        completionHandler:(LRServiceCompletionHandler)handler {
 
     self.provider = provider;
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://%@.hub.loginradius.com/RequestHandlor.aspx?same_window=1&apikey=%@&callbacktype=hash&provider=%@&callback=%@://", [LoginRadiusSDK siteName], [LoginRadiusSDK apiKey], provider, [LoginRadiusSDK siteName]]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://%@.hub.loginradius.com/RequestHandlor.aspx?same_window=1&is_access_token=1&apikey=%@&callbacktype=hash&provider=%@&callback=%@://", [LoginRadiusSDK siteName], [LoginRadiusSDK apiKey], provider, [LoginRadiusSDK siteName]]];
     SFSafariViewController *sfcontroller = [[SFSafariViewController alloc] initWithURL:url];
     sfcontroller.delegate = self;
     [controller presentViewController:sfcontroller animated:NO completion:nil];

@@ -13,14 +13,13 @@ static NSString * _Nonnull const LoginRadiusDomain = @"com.loginradius";
 + (NSError *)errorWithCode:(NSInteger)code
 			   description:(NSString *)description
 			 failureReason:(NSString *)failureReason {
-    
 	NSError *err = [NSError errorWithDomain:LoginRadiusDomain
 									   code:code
 								   userInfo:@{
 											  NSLocalizedDescriptionKey: description,
 											  NSLocalizedFailureReasonErrorKey: failureReason,
 											  }];
-	return nil;
+	return err;
 }
 
 

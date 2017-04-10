@@ -37,7 +37,7 @@ PODS:
 
 DEPENDENCIES:
   - Eureka (from `https://github.com/xmartlabs/Eureka.git`, branch `master`)
-  - LoginRadiusSDK (from `https://github.com/LoginRadius/ios-sdk`, branch `master`)
+  - LoginRadiusSDK (from `https://github.com/tsanjoto/ios-sdk`, branch `master`)
   - SwiftHTTP (from `https://github.com/daltoniam/SwiftHTTP`, branch `master`)
   - SwiftyJSON (from `https://github.com/IBM-Swift/SwiftyJSON.git`, branch `master`)
 
@@ -47,7 +47,7 @@ EXTERNAL SOURCES:
     :git: https://github.com/xmartlabs/Eureka.git
   LoginRadiusSDK:
     :branch: master
-    :git: https://github.com/LoginRadius/ios-sdk
+    :git: https://github.com/tsanjoto/ios-sdk
   SwiftHTTP:
     :branch: master
     :git: https://github.com/daltoniam/SwiftHTTP
@@ -60,8 +60,8 @@ CHECKOUT OPTIONS:
     :commit: 074ad432e697650087276e01c67bbb255e3ab1f4
     :git: https://github.com/xmartlabs/Eureka.git
   LoginRadiusSDK:
-    :commit: f7aef755478cf0e408e3185bc9d71c2f95918bda
-    :git: https://github.com/LoginRadius/ios-sdk
+    :commit: 3ef7247918fac64b998dfdf1bdbb65e90506234a
+    :git: https://github.com/tsanjoto/ios-sdk
   SwiftHTTP:
     :commit: 7494dd9cae40beb8d76fbc910f67fe4f2ed2a050
     :git: https://github.com/daltoniam/SwiftHTTP
@@ -81,6 +81,6 @@ SPEC CHECKSUMS:
   SwiftHTTP: c04bfedac299c931fbf419f07b7d42024ff45fdd
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: ef008a99591b0c331bd87c24bda2b26a8b6a1bce
+PODFILE CHECKSUM: 7d823cb1ce210371f1ece264a4656f4e2427ef3f
 
 COCOAPODS: 1.2.0

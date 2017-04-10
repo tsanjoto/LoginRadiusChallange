@@ -20,4 +20,11 @@
 
 - (void)getUserProfileWithAccessToken:(NSString *)token completionHandler:(LRAPIResponseHandler) completion;
 
+- (void)updateUserProfileWithAccessToken:(NSString *) token
+                                  appkey:(NSString *) appkey
+                               appsecret:(NSString *) appsecret
+                              parameters:(NSDictionary *) parameters
+                       completionHandler:(LRAPIResponseHandler) completion;
+
+
 @end

@@ -16,6 +16,7 @@ typedef void (^LRServiceCompletionHandler)(BOOL success, NSError *error);
 @interface LoginRadiusSDK : NSObject
 
 @property (strong, readonly, nonatomic) NSString* apiKey;
+@property (strong, readonly, nonatomic) NSString* apiSecret;
 @property (strong, readonly, nonatomic) NSString* siteName;
 /**
  *  Set language for the loginradius hosted pages for user registration service, currently we support english, spanish,
@@ -38,6 +39,7 @@ typedef void (^LRServiceCompletionHandler)(BOOL success, NSError *error);
  */
 + (instancetype)sharedInstance;
 + (NSString*)apiKey;
++ (NSString*)apiSecret;
 + (NSString*)siteName;
 #pragma mark - Application Delegate methods
 
