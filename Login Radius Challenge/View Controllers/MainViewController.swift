@@ -59,7 +59,6 @@ class MainViewController: FormViewController, SFSafariViewControllerDelegate {
             <<< EmailRow("Email Login")
             {
                 $0.title = "Email"
-                $0.value = "tsanjoto@gmail.com"
                 $0.hidden = loginCondition
                 $0.add(rule: RuleRequired(msg: "Email Required"))
                 $0.add(rule: RuleEmail(msg: "Incorrect Email format"))
@@ -67,7 +66,6 @@ class MainViewController: FormViewController, SFSafariViewControllerDelegate {
             <<< PasswordRow("Password Login")
             {
                 $0.title = "Password"
-                $0.value = "password"
                 $0.hidden = loginCondition
                 $0.add(rule: RuleRequired(msg: "Password Required"))
                 $0.add(rule: RuleMinLength(minLength: 6, msg: "Length of password must be at least 6"))
