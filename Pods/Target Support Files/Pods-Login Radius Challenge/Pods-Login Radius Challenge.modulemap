@@ -1,6 +1,0 @@
-framework module Pods_Login_Radius_Challenge {
-  umbrella header "Pods-Login Radius Challenge-umbrella.h"
-
-  export *
-  module * { export * }
-}
