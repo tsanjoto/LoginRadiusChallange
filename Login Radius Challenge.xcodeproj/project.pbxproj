@@ -1,0 +1,673 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55152339457519333A0D3ED0 /* Pods_Login_Radius_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 448961E28745AB7839C663C5 /* Pods_Login_Radius_Challenge.framework */; };
+		F23951CD1E9A0C22008B85CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23951CC1E9A0C22008B85CE /* AppDelegate.swift */; };
+		F23951D21E9A0C22008B85CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23951D01E9A0C22008B85CE /* Main.storyboard */; };
+		F23951D41E9A0C22008B85CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F23951D31E9A0C22008B85CE /* Assets.xcassets */; };
+		F23951D71E9A0C22008B85CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23951D51E9A0C22008B85CE /* LaunchScreen.storyboard */; };
+		F23951E21E9A0C22008B85CE /* Login_Radius_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23951E11E9A0C22008B85CE /* Login_Radius_ChallengeTests.swift */; };
+		F23951ED1E9A0C22008B85CE /* Login_Radius_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23951EC1E9A0C22008B85CE /* Login_Radius_ChallengeUITests.swift */; };
+		F23951FB1E9A0CDD008B85CE /* LoginRadius.plist in Resources */ = {isa = PBXBuildFile; fileRef = F23951FA1E9A0CDD008B85CE /* LoginRadius.plist */; };
+		F23952081E9A33D5008B85CE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23952051E9A33D5008B85CE /* DetailViewController.swift */; };
+		F23952091E9A33D5008B85CE /* FullDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23952061E9A33D5008B85CE /* FullDetailViewController.swift */; };
+		F239520A1E9A33D5008B85CE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23952071E9A33D5008B85CE /* MainViewController.swift */; };
+		F239520D1E9A33E8008B85CE /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239520B1E9A33E8008B85CE /* AlertUtils.swift */; };
+		F239520E1E9A33E8008B85CE /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239520C1E9A33E8008B85CE /* NetworkUtils.swift */; };
+		F23952101E9A33F2008B85CE /* MethodsToURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = F239520F1E9A33F2008B85CE /* MethodsToURL.swift */; };
+		F23952121E9A383F008B85CE /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23952111E9A383F008B85CE /* Gender.swift */; };
+		F23952171E9AD05E008B85CE /* CharacterSetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23952161E9AD05E008B85CE /* CharacterSetExtension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F23951DE1E9A0C22008B85CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F23951C11E9A0C22008B85CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F23951C81E9A0C22008B85CE;
+			remoteInfo = "Login Radius Challenge";
+		};
+		F23951E91E9A0C22008B85CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F23951C11E9A0C22008B85CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F23951C81E9A0C22008B85CE;
+			remoteInfo = "Login Radius Challenge";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		448961E28745AB7839C663C5 /* Pods_Login_Radius_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Login_Radius_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72C7751D28FED5B8DE2CF48D /* Pods-Login Radius Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login Radius Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-Login Radius Challenge/Pods-Login Radius Challenge.release.xcconfig"; sourceTree = "<group>"; };
+		9F91547ED9629370DB596364 /* Pods-Login Radius Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login Radius Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Login Radius Challenge/Pods-Login Radius Challenge.debug.xcconfig"; sourceTree = "<group>"; };
+		F23951C91E9A0C22008B85CE /* Login Radius Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Login Radius Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F23951CC1E9A0C22008B85CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F23951D11E9A0C22008B85CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F23951D31E9A0C22008B85CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F23951D61E9A0C22008B85CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F23951D81E9A0C22008B85CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F23951DD1E9A0C22008B85CE /* Login Radius ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Login Radius ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F23951E11E9A0C22008B85CE /* Login_Radius_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_Radius_ChallengeTests.swift; sourceTree = "<group>"; };
+		F23951E31E9A0C22008B85CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F23951E81E9A0C22008B85CE /* Login Radius ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Login Radius ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F23951EC1E9A0C22008B85CE /* Login_Radius_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_Radius_ChallengeUITests.swift; sourceTree = "<group>"; };
+		F23951EE1E9A0C22008B85CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F23951FA1E9A0CDD008B85CE /* LoginRadius.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LoginRadius.plist; sourceTree = "<group>"; };
+		F23952051E9A33D5008B85CE /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = "View Controllers/DetailViewController.swift"; sourceTree = "<group>"; };
+		F23952061E9A33D5008B85CE /* FullDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FullDetailViewController.swift; path = "View Controllers/FullDetailViewController.swift"; sourceTree = "<group>"; };
+		F23952071E9A33D5008B85CE /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = "View Controllers/MainViewController.swift"; sourceTree = "<group>"; };
+		F239520B1E9A33E8008B85CE /* AlertUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlertUtils.swift; path = Utilities/AlertUtils.swift; sourceTree = "<group>"; };
+		F239520C1E9A33E8008B85CE /* NetworkUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkUtils.swift; path = Utilities/NetworkUtils.swift; sourceTree = "<group>"; };
+		F239520F1E9A33F2008B85CE /* MethodsToURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MethodsToURL.swift; path = "Static Variables/MethodsToURL.swift"; sourceTree = "<group>"; };
+		F23952111E9A383F008B85CE /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gender.swift; path = "Static Variables/Gender.swift"; sourceTree = "<group>"; };
+		F23952161E9AD05E008B85CE /* CharacterSetExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacterSetExtension.swift; path = "Static Variables/CharacterSetExtension.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F23951C61E9A0C22008B85CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55152339457519333A0D3ED0 /* Pods_Login_Radius_Challenge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F23951DA1E9A0C22008B85CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F23951E51E9A0C22008B85CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00A7D25FFDD0FA89E6E665DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F91547ED9629370DB596364 /* Pods-Login Radius Challenge.debug.xcconfig */,
+				72C7751D28FED5B8DE2CF48D /* Pods-Login Radius Challenge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7757DA43F5B0A14763F469C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				448961E28745AB7839C663C5 /* Pods_Login_Radius_Challenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F23951C01E9A0C22008B85CE = {
+			isa = PBXGroup;
+			children = (
+				F23951CB1E9A0C22008B85CE /* Login Radius Challenge */,
+				F23951E01E9A0C22008B85CE /* Login Radius ChallengeTests */,
+				F23951EB1E9A0C22008B85CE /* Login Radius ChallengeUITests */,
+				F23951CA1E9A0C22008B85CE /* Products */,
+				00A7D25FFDD0FA89E6E665DE /* Pods */,
+				7757DA43F5B0A14763F469C6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F23951CA1E9A0C22008B85CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F23951C91E9A0C22008B85CE /* Login Radius Challenge.app */,
+				F23951DD1E9A0C22008B85CE /* Login Radius ChallengeTests.xctest */,
+				F23951E81E9A0C22008B85CE /* Login Radius ChallengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F23951CB1E9A0C22008B85CE /* Login Radius Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				F23951CC1E9A0C22008B85CE /* AppDelegate.swift */,
+				F23952031E9A3353008B85CE /* Static Variables */,
+				F23952021E9A332F008B85CE /* Utilities */,
+				F23952041E9A3376008B85CE /* View Controllers */,
+				F23951D01E9A0C22008B85CE /* Main.storyboard */,
+				F23951D31E9A0C22008B85CE /* Assets.xcassets */,
+				F23951D51E9A0C22008B85CE /* LaunchScreen.storyboard */,
+				F23951FA1E9A0CDD008B85CE /* LoginRadius.plist */,
+				F23951D81E9A0C22008B85CE /* Info.plist */,
+			);
+			path = "Login Radius Challenge";
+			sourceTree = "<group>";
+		};
+		F23951E01E9A0C22008B85CE /* Login Radius ChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				F23951E11E9A0C22008B85CE /* Login_Radius_ChallengeTests.swift */,
+				F23951E31E9A0C22008B85CE /* Info.plist */,
+			);
+			path = "Login Radius ChallengeTests";
+			sourceTree = "<group>";
+		};
+		F23951EB1E9A0C22008B85CE /* Login Radius ChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F23951EC1E9A0C22008B85CE /* Login_Radius_ChallengeUITests.swift */,
+				F23951EE1E9A0C22008B85CE /* Info.plist */,
+			);
+			path = "Login Radius ChallengeUITests";
+			sourceTree = "<group>";
+		};
+		F23952021E9A332F008B85CE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F239520B1E9A33E8008B85CE /* AlertUtils.swift */,
+				F239520C1E9A33E8008B85CE /* NetworkUtils.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		F23952031E9A3353008B85CE /* Static Variables */ = {
+			isa = PBXGroup;
+			children = (
+				F239520F1E9A33F2008B85CE /* MethodsToURL.swift */,
+				F23952111E9A383F008B85CE /* Gender.swift */,
+				F23952161E9AD05E008B85CE /* CharacterSetExtension.swift */,
+			);
+			name = "Static Variables";
+			sourceTree = "<group>";
+		};
+		F23952041E9A3376008B85CE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F23952071E9A33D5008B85CE /* MainViewController.swift */,
+				F23952051E9A33D5008B85CE /* DetailViewController.swift */,
+				F23952061E9A33D5008B85CE /* FullDetailViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F23951C81E9A0C22008B85CE /* Login Radius Challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F23951F11E9A0C22008B85CE /* Build configuration list for PBXNativeTarget "Login Radius Challenge" */;
+			buildPhases = (
+				8309DBFFC940B2B6823B63BC /* [CP] Check Pods Manifest.lock */,
+				F23951C51E9A0C22008B85CE /* Sources */,
+				F23951C61E9A0C22008B85CE /* Frameworks */,
+				F23951C71E9A0C22008B85CE /* Resources */,
+				DAF5F5C508B871AAA2E0557F /* [CP] Embed Pods Frameworks */,
+				0CB964A903835B1F348F93C4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Login Radius Challenge";
+			productName = "Login Radius Challenge";
+			productReference = F23951C91E9A0C22008B85CE /* Login Radius Challenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F23951DC1E9A0C22008B85CE /* Login Radius ChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F23951F41E9A0C22008B85CE /* Build configuration list for PBXNativeTarget "Login Radius ChallengeTests" */;
+			buildPhases = (
+				F23951D91E9A0C22008B85CE /* Sources */,
+				F23951DA1E9A0C22008B85CE /* Frameworks */,
+				F23951DB1E9A0C22008B85CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F23951DF1E9A0C22008B85CE /* PBXTargetDependency */,
+			);
+			name = "Login Radius ChallengeTests";
+			productName = "Login Radius ChallengeTests";
+			productReference = F23951DD1E9A0C22008B85CE /* Login Radius ChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F23951E71E9A0C22008B85CE /* Login Radius ChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F23951F71E9A0C22008B85CE /* Build configuration list for PBXNativeTarget "Login Radius ChallengeUITests" */;
+			buildPhases = (
+				F23951E41E9A0C22008B85CE /* Sources */,
+				F23951E51E9A0C22008B85CE /* Frameworks */,
+				F23951E61E9A0C22008B85CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F23951EA1E9A0C22008B85CE /* PBXTargetDependency */,
+			);
+			name = "Login Radius ChallengeUITests";
+			productName = "Login Radius ChallengeUITests";
+			productReference = F23951E81E9A0C22008B85CE /* Login Radius ChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F23951C11E9A0C22008B85CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Thompson Sanjoto";
+				TargetAttributes = {
+					F23951C81E9A0C22008B85CE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6255SDXVG2;
+						ProvisioningStyle = Automatic;
+					};
+					F23951DC1E9A0C22008B85CE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6255SDXVG2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F23951C81E9A0C22008B85CE;
+					};
+					F23951E71E9A0C22008B85CE = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6255SDXVG2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F23951C81E9A0C22008B85CE;
+					};
+				};
+			};
+			buildConfigurationList = F23951C41E9A0C22008B85CE /* Build configuration list for PBXProject "Login Radius Challenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F23951C01E9A0C22008B85CE;
+			productRefGroup = F23951CA1E9A0C22008B85CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F23951C81E9A0C22008B85CE /* Login Radius Challenge */,
+				F23951DC1E9A0C22008B85CE /* Login Radius ChallengeTests */,
+				F23951E71E9A0C22008B85CE /* Login Radius ChallengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F23951C71E9A0C22008B85CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F23951FB1E9A0CDD008B85CE /* LoginRadius.plist in Resources */,
+				F23951D71E9A0C22008B85CE /* LaunchScreen.storyboard in Resources */,
+				F23951D41E9A0C22008B85CE /* Assets.xcassets in Resources */,
+				F23951D21E9A0C22008B85CE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F23951DB1E9A0C22008B85CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F23951E61E9A0C22008B85CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CB964A903835B1F348F93C4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Login Radius Challenge/Pods-Login Radius Challenge-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8309DBFFC940B2B6823B63BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DAF5F5C508B871AAA2E0557F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Login Radius Challenge/Pods-Login Radius Challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F23951C51E9A0C22008B85CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F23952081E9A33D5008B85CE /* DetailViewController.swift in Sources */,
+				F23952171E9AD05E008B85CE /* CharacterSetExtension.swift in Sources */,
+				F239520D1E9A33E8008B85CE /* AlertUtils.swift in Sources */,
+				F23952091E9A33D5008B85CE /* FullDetailViewController.swift in Sources */,
+				F23951CD1E9A0C22008B85CE /* AppDelegate.swift in Sources */,
+				F23952121E9A383F008B85CE /* Gender.swift in Sources */,
+				F23952101E9A33F2008B85CE /* MethodsToURL.swift in Sources */,
+				F239520E1E9A33E8008B85CE /* NetworkUtils.swift in Sources */,
+				F239520A1E9A33D5008B85CE /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F23951D91E9A0C22008B85CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F23951E21E9A0C22008B85CE /* Login_Radius_ChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F23951E41E9A0C22008B85CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F23951ED1E9A0C22008B85CE /* Login_Radius_ChallengeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F23951DF1E9A0C22008B85CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F23951C81E9A0C22008B85CE /* Login Radius Challenge */;
+			targetProxy = F23951DE1E9A0C22008B85CE /* PBXContainerItemProxy */;
+		};
+		F23951EA1E9A0C22008B85CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F23951C81E9A0C22008B85CE /* Login Radius Challenge */;
+			targetProxy = F23951E91E9A0C22008B85CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F23951D01E9A0C22008B85CE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F23951D11E9A0C22008B85CE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F23951D51E9A0C22008B85CE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F23951D61E9A0C22008B85CE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F23951EF1E9A0C22008B85CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F23951F01E9A0C22008B85CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F23951F21E9A0C22008B85CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F91547ED9629370DB596364 /* Pods-Login Radius Challenge.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6255SDXVG2;
+				INFOPLIST_FILE = "Login Radius Challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tsanjoto.Login-Radius-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F23951F31E9A0C22008B85CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72C7751D28FED5B8DE2CF48D /* Pods-Login Radius Challenge.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6255SDXVG2;
+				INFOPLIST_FILE = "Login Radius Challenge/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tsanjoto.Login-Radius-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F23951F51E9A0C22008B85CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6255SDXVG2;
+				INFOPLIST_FILE = "Login Radius ChallengeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tsanjoto.Login-Radius-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Login Radius Challenge.app/Login Radius Challenge";
+			};
+			name = Debug;
+		};
+		F23951F61E9A0C22008B85CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 6255SDXVG2;
+				INFOPLIST_FILE = "Login Radius ChallengeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tsanjoto.Login-Radius-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Login Radius Challenge.app/Login Radius Challenge";
+			};
+			name = Release;
+		};
+		F23951F81E9A0C22008B85CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 6255SDXVG2;
+				INFOPLIST_FILE = "Login Radius ChallengeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tsanjoto.Login-Radius-ChallengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Login Radius Challenge";
+			};
+			name = Debug;
+		};
+		F23951F91E9A0C22008B85CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 6255SDXVG2;
+				INFOPLIST_FILE = "Login Radius ChallengeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "tsanjoto.Login-Radius-ChallengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Login Radius Challenge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F23951C41E9A0C22008B85CE /* Build configuration list for PBXProject "Login Radius Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F23951EF1E9A0C22008B85CE /* Debug */,
+				F23951F01E9A0C22008B85CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F23951F11E9A0C22008B85CE /* Build configuration list for PBXNativeTarget "Login Radius Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F23951F21E9A0C22008B85CE /* Debug */,
+				F23951F31E9A0C22008B85CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F23951F41E9A0C22008B85CE /* Build configuration list for PBXNativeTarget "Login Radius ChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F23951F51E9A0C22008B85CE /* Debug */,
+				F23951F61E9A0C22008B85CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F23951F71E9A0C22008B85CE /* Build configuration list for PBXNativeTarget "Login Radius ChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F23951F81E9A0C22008B85CE /* Debug */,
+				F23951F91E9A0C22008B85CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F23951C11E9A0C22008B85CE /* Project object */;
+}

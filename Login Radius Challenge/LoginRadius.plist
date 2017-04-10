@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ApiKey</key>
+	<string>94dd8825-669d-44f3-ae1a-5f0828016ae6</string>
+	<key>ApiSecret</key>
+	<string>07cc3051-ff45-465e-a69b-9b97e2e3dc80</string>
+	<key>SiteName</key>
+	<string>lr-candidate-demo3</string>
+</dict>
+</plist>
