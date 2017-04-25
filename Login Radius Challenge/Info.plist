@@ -30,7 +30,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>lr-candidate-demo3</string>
+				<string>lr-thompson</string>
 			</array>
 		</dict>
 	</array>

@@ -17,9 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     //Skip using config.plist, don't really wanna handle reading off plist
-    static var apiKey: String = "94dd8825-669d-44f3-ae1a-5f0828016ae6"
-    static var apiSecret: String = "07cc3051-ff45-465e-a69b-9b97e2e3dc80"
-    static var siteName: String = "lr-candidate-demo3"
+    static var apiKey: String = "aad1d378-8613-429b-b728-bb2550e453f3"
+    static var apiSecret: String = "b49136b3-dbe5-4e7b-83d0-519bb251c23a"
+    static var siteName: String = "lr-thompson"
     
     var userToken: String? = nil
     
