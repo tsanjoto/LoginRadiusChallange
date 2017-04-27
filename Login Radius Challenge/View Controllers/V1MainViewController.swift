@@ -57,7 +57,21 @@ class V1MainViewController: FormViewController, SFSafariViewControllerDelegate, 
         //end of conditions
         
         //Create UI forms
-        form  +++ Section("Normal Login Features")
+        form +++ Section("Login Features using LR pod")
+            <<< ButtonRow("Login LR API")
+            {
+                $0.title = "Login"
+                }.onCellSelection{ row in
+                    self.normalLoginWithLRPod()
+            }
+            <<< ButtonRow("Register LR API")
+            {
+                $0.title = "Register"
+                }.onCellSelection{ row in
+                    self.registerLoginWithLRPod()
+            }
+            
+            +++ Section("Direct API Login Features")
             <<< SwitchRow("Login")
             {
                 $0.title = $0.tag
@@ -178,6 +192,31 @@ class V1MainViewController: FormViewController, SFSafariViewControllerDelegate, 
     }
 
     //Functionality Area
+    func normalLoginWithLRPod()
+    {
+        LoginRadiusRegistrationManager.sharedInstance().registration(withAction: "login", in: self, completionHandler: { (success, error) in
+            if (success) {
+                print("successfully logged in");
+                self.showProfileController();
+            } else {
+                print(error!.localizedDescription)
+            }
+        });
+    }
+    
+
+    
+    func registerLoginWithLRPod()
+    {
+        LoginRadiusRegistrationManager.sharedInstance().registration(withAction: "registration", in: self, completionHandler: { (success, error) in
+            if (success) {
+                AlertUtils.showAlert(self, title: "Success", message: "Verify you email", completion: nil)
+            } else {
+                print(error!.localizedDescription)
+            }
+        });
+    }
+    
     
     ///Validate and Send UI information to perform Normal user login in LoginRadius
     func normalLogin()
