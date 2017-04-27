@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  V1MainViewController.swift
 //  Login Radius Challenge
 //
 //  Created by Thompson Sanjoto on 2017-04-08.
@@ -12,7 +12,13 @@ import SwiftyJSON
 import SafariServices
 import LoginRadiusSDK
 
-class MainViewController: FormViewController, SFSafariViewControllerDelegate {
+
+protocol ProfilePresenter
+{
+    func showProfileController() -> Void
+}
+
+class V1MainViewController: FormViewController, SFSafariViewControllerDelegate, ProfilePresenter {
     
     var forgotPasswordToken:String? = nil
     {
@@ -33,7 +39,7 @@ class MainViewController: FormViewController, SFSafariViewControllerDelegate {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.title = "Login Radius Challenge"
+        self.tabBarController?.navigationItem.title = "Login Radius V1"
         self.form = Form()
         
         //These is the just rules to toggle visibility of the UI elements
@@ -193,7 +199,7 @@ class MainViewController: FormViewController, SFSafariViewControllerDelegate {
                           "password": form.rowBy(tag: "Password Login")!.baseValue! as! String,
         ]
         
-        let url = LoginRadiusUrlMethods.base + LoginRadiusUrlMethods.login
+        let url = LoginRadiusUrlMethodsV1.base + LoginRadiusUrlMethodsV1.login
         
         
         NetworkUtils.restCall(url, method: .GET, queryParam:queryParam, parameters: nil, headers: nil, completion: {
@@ -250,7 +256,7 @@ class MainViewController: FormViewController, SFSafariViewControllerDelegate {
         
         let queryParam = ["appkey":AppDelegate.apiKey, "appsecret":AppDelegate.apiSecret]
         
-        let url = LoginRadiusUrlMethods.base + LoginRadiusUrlMethods.register
+        let url = LoginRadiusUrlMethodsV1.base + LoginRadiusUrlMethodsV1.register
         
         NetworkUtils.restCall(url , method: .POST, queryParam:queryParam, parameters: parameter, completion: {
             (response)->Void in
@@ -286,7 +292,7 @@ class MainViewController: FormViewController, SFSafariViewControllerDelegate {
                           "email": emailEncoded
                         ]
         
-        let url = LoginRadiusUrlMethods.base + LoginRadiusUrlMethods.forgotPassword
+        let url = LoginRadiusUrlMethodsV1.base + LoginRadiusUrlMethodsV1.forgotPassword
         
         NetworkUtils.restCall(url , method: .GET, queryParam:queryParam, parameters: nil, completion: {
             (response)->Void in

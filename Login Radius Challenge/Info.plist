@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>FacebookDisplayName</key>
+	<string>Thompson Test App</string>
+	<key>FacebookAppID</key>
+	<string>1983348711886553</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -30,12 +34,21 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
+				<string>com.googleusercontent.apps.406621122580-gu70hgq23blla0cgbug4692io1ne8qjs</string>
 				<string>lr-thompson</string>
+				<string>fb1983348711886553</string>
 			</array>
 		</dict>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

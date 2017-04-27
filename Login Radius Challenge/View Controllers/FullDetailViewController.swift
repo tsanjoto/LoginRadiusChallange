@@ -24,8 +24,16 @@ class FullDetailViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let defaults = UserDefaults.standard
-        let userProfileStr = defaults.object(forKey: "lrUserProfile") as! String //LR had a huge chunk on converting to proper nsdictionary, skip save as string
-        let user = JSON.parse(string: userProfileStr)
+        var user:JSON = JSON([])
+        
+        if let userProfileStr = defaults.object(forKey: "lrUserProfile") as? String //LR had a huge chunk on converting to proper nsdictionary, skip save as string
+        {
+            user = JSON.parse(string: userProfileStr)
+        }else if let userDict = defaults.object(forKey: "lrUserProfile") as? NSDictionary
+        {
+            user = JSON(userDict)
+        }
+
         self.form = Form()
         
         self.navigationItem.title = "Full Profile"

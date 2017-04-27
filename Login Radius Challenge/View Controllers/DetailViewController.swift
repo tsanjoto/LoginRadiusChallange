@@ -12,6 +12,8 @@ import LoginRadiusSDK
 
 class DetailViewController: FormViewController {
     
+    var urlMethods:Int = 1 //1 = v1. 2 = v2...
+    
     //List of countries provided from Apple's NSLocale class
     let countries = NSLocale.isoCountryCodes.map { (code:String) -> String in
         let id = NSLocale.localeIdentifier(fromComponents: [NSLocale.Key.countryCode.rawValue: code])
@@ -23,8 +25,15 @@ class DetailViewController: FormViewController {
         
         //Extract relevant data for simple profile
         let defaults = UserDefaults.standard
-        let userProfileStr = defaults.object(forKey: "lrUserProfile") as! String //LR had a huge chunk on converting to proper nsdictionary, skip save as string
-        let user = JSON.parse(string: userProfileStr)
+        var user:JSON = JSON([])
+        
+        if let userProfileStr = defaults.object(forKey: "lrUserProfile") as? String //LR had a huge chunk on converting to proper nsdictionary, skip save as string
+        {
+            user = JSON.parse(string: userProfileStr)
+        }else if let userDict = defaults.object(forKey: "lrUserProfile") as? NSDictionary
+        {
+            user = JSON(userDict)
+        }
 
         let userEmail = ((user["Email"].array)?[0]["Value"] )?.string
         
@@ -122,12 +131,21 @@ class DetailViewController: FormViewController {
         
         if errors.count == 0
         {
-            updateProfile()
+            switch urlMethods
+            {
+                case 2:
+                    updateProfileV2()
+                case 1:
+                fallthrough
+                default:
+                    updateProfileV1()
+            }
+           // updateProfile()
         }
     }
     
     /// Parse input into Dictionaries and send to server
-    func updateProfile()
+    func updateProfileV1()
     {
 
         var parameters:[String:Any] = [:]
@@ -151,7 +169,7 @@ class DetailViewController: FormViewController {
                            "token": token
         ]
         
-        let url = LoginRadiusUrlMethods.base + LoginRadiusUrlMethods.updateUserProfile
+        let url = LoginRadiusUrlMethodsV1.base + LoginRadiusUrlMethodsV1.updateUserProfile
         
         NetworkUtils.restCall(url , method: .POST, queryParam:queryParam, parameters: parameters, completion: {
             (response)->Void in
@@ -169,6 +187,64 @@ class DetailViewController: FormViewController {
             
         })
         
+    }
+    
+    func updateProfileV2()
+    {
+        
+        var parameters:[String:Any] = [:]
+        
+        for row in form.allRows
+        {
+
+            //v1's country is just a string, v2 is an object consist of code & name
+            if row.tag == "Country"
+            {
+                //get me the code given the display name
+                var code = ""
+                if let i = countries.index(of: row.baseValue as! String)
+                {
+                    code = NSLocale.isoCountryCodes[i]
+                }
+                
+                parameters[row.tag!] = ["Code":code,"Name":row.baseValue!]
+                continue
+            }
+            
+            if row.tag != "Email"
+            {
+                parameters[row.tag!] = row.baseValue
+            }
+            
+        }
+        
+        let convertGenderBack = Gender(string: parameters["Gender"] as! String? )
+        parameters["Gender"] = convertGenderBack!.rawValue
+        
+        let defaults = UserDefaults.standard
+        let token = defaults.object(forKey: "lrAccessToken") as! String
+        
+        let queryParam = [  "apikey": AppDelegate.apiKey,
+                            "access_token": token
+        ]
+        print(parameters)
+        let url = LoginRadiusUrlMethodsV2.base + LoginRadiusUrlMethodsV2.updateUserProfile
+        
+        NetworkUtils.restCall(url , method: .PUT, queryParam:queryParam, parameters: parameters, completion: {
+            (response)->Void in
+            
+            if let err = response.error
+            {
+                print(err.description)
+                AlertUtils.showAlert(self, title: "ERROR", message: NetworkUtils.parseLoginRadiusError(response: response), completion: nil)
+            }else
+            {
+                AlertUtils.showAlert(self, title: "Success", message: "User updated!", completion: {(alert)->Void in
+                    self.logoutPressed()
+                })
+            }
+            
+        })
     }
     
     func showResponse(title:String, message:String, completion:((UIAlertAction) -> Void)?)

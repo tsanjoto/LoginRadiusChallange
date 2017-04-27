@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>GoogleNativeKey</key>
+	<string>com.googleusercontent.apps.406621122580-gu70hgq23blla0cgbug4692io1ne8qjs</string>
+	<key>FacebookNativeKey</key>
+	<string>fb1983348711886553</string>
 	<key>ApiKey</key>
 	<string>aad1d378-8613-429b-b728-bb2550e453f3</string>
 	<key>ApiSecret</key>
