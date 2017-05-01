@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>V2RecaptchaSiteKey</key>
+	<string>6Ld4GR8UAAAAABtkCDSKADICV3yc6eA_JGDVVo-N</string>
 	<key>GoogleNativeKey</key>
 	<string>com.googleusercontent.apps.406621122580-gu70hgq23blla0cgbug4692io1ne8qjs</string>
 	<key>FacebookNativeKey</key>
