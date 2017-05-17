@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "81EC94FCD3B9666186F2542E1D4041AED68E9C55",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "467C8C9057A4C5A6071FB5778F06D3509020AA76" : 9223372036854775807,
+    "81EC94FCD3B9666186F2542E1D4041AED68E9C55" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "65089458-89B2-48A9-8204-D6326992E79B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "467C8C9057A4C5A6071FB5778F06D3509020AA76" : "ios-sdk\/",
+    "81EC94FCD3B9666186F2542E1D4041AED68E9C55" : "Tom%20LR%20Challenge\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Login Radius Challenge",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Login Radius Challenge.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/LoginRadius\/ios-sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "467C8C9057A4C5A6071FB5778F06D3509020AA76"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tsanjoto\/LoginRadiusChallenge.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "81EC94FCD3B9666186F2542E1D4041AED68E9C55"
+    }
+  ]
+}

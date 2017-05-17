@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         var configureError: NSError?
         GGLContext.sharedInstance().configureWithError(&configureError)
-        assert(configureError == nil, "Error configuring Google services: \(configureError)")
+        assert(configureError == nil, "Error configuring Google services: \(String(describing: configureError))")
         
         GIDSignIn.sharedInstance().delegate = self
         
@@ -73,6 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         var shouldOpen:Bool = false
         // if only switch statement can unwrap optionals...
+        
         if url.scheme == AppDelegate.siteName
         {
             //this is coming from normal LR logins
@@ -174,17 +175,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         }
     }
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        let idToken: String = user.authentication.accessToken
-        LoginRadiusSocialLoginManager.sharedInstance().nativeGoogleLogin(withAccessToken: idToken, completionHandler: {(_ success: Bool, _ error: Error?) -> Void in
-            if success {
-                print("successfully logged in with google")
-                self.showProfileScreen()
-            }
-            else {
-                print("Error: \(String(describing: error?.localizedDescription))")
-            }
-        })
-
+    
+        if let err = error
+        {
+            print("Error: \(err.localizedDescription)")
+        }
+        else
+        {
+            let idToken: String = user.authentication.accessToken
+            LoginRadiusSocialLoginManager.sharedInstance().nativeGoogleLogin(withAccessToken: idToken, completionHandler: {(_ success: Bool, _ error: Error?) -> Void in
+                if success {
+                    print("successfully logged in with google")
+                    self.showProfileScreen()
+                }
+                else {
+                    print("Error: \(String(describing: error?.localizedDescription))")
+                }
+            })
+        }
     }
 }
 

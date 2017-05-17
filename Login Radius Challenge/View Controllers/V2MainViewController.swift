@@ -394,14 +394,13 @@ class V2MainViewController: FormViewController, SFSafariViewControllerDelegate, 
                 //this needs to be handled from app delegate call, see AppDelegate.swift
                 print("successfully logged in with \(provider)");
             } else {
-                AlertUtils.showAlert(self, title: "ERROR", message: "Failed to logged in", completion: nil)
+                AlertUtils.showAlert(self, title: "ERROR", message: error?.localizedDescription ?? "Unknown Error", completion: nil)
             }
         });
     }
     
     func showNativeGoogleLogin()
     {
-        //LoginRadiusSocialLoginManager.sharedInstance().nativeGoogleLogin(withAccessToken: <#T##String!#>, completionHandler: <#T##LRServiceCompletionHandler!##LRServiceCompletionHandler!##(Bool, Error?) -> Void#>)
         GIDSignIn.sharedInstance().signIn()
     }
     
